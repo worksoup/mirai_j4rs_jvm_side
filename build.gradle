@@ -12,7 +12,7 @@ repositories {
 dependencies {
     testImplementation platform('org.junit:junit-bom:5.9.1')
     testImplementation 'org.junit.jupiter:junit-jupiter'
-    implementation 'net.mamoe:mirai-core:2.15.0'
+    implementation 'net.mamoe:mirai-core:2.16.0-RC'
     implementation 'io.github.astonbitecode:j4rs:0.17.1'
     implementation 'org.asynchttpclient:async-http-client:2.12.3'
     implementation 'org.apache.commons:commons-lang3:3.13.0'
