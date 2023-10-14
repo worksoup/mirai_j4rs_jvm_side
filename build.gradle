@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'org.jetbrains.kotlin.jvm' version '1.9.0'
 }
 
 group = 'rt.lea'
@@ -17,8 +18,12 @@ dependencies {
     implementation 'org.asynchttpclient:async-http-client:2.12.3'
     implementation 'org.apache.commons:commons-lang3:3.13.0'
     implementation fileTree(dir:"libs", include:["*.jar"])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
 }
 
 test {
     useJUnitPlatform()
+}
+kotlin {
+    jvmToolchain(17)
 }

@@ -21,7 +21,7 @@ public final class LumiaFunction<T, R> implements Function<T, R> {
         this.rustFunction = rustFunction;
     }
 
-    private native Instance<R> nativeApply(Instance<List<Byte>> rustConsumerInstance, Instance<T> arg);
+    private native Instance<R> nativeApply(Instance<List<Byte>> rustFunctionInstance, Instance<T> arg);
 
     static {
         System.loadLibrary("mirai_j4rs");
