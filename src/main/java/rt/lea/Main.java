@@ -21,16 +21,7 @@ import net.mamoe.mirai.event.Event;
 import net.mamoe.mirai.event.events.MemberJoinRequestEvent;
 import net.mamoe.mirai.event.events.NewFriendRequestEvent;
 import net.mamoe.mirai.message.MessageReceipt;
-import net.mamoe.mirai.message.data.ForwardMessage;
-import net.mamoe.mirai.message.data.MessageSource;
-import net.mamoe.mirai.message.data.PokeMessage;
-import net.mamoe.mirai.message.data.VipFace;
-import net.mamoe.mirai.message.data.Face;
-import net.mamoe.mirai.message.data.OnlineMessageSource;
-import net.mamoe.mirai.message.data.MessageChain;
-import net.mamoe.mirai.message.data.Image;
-import net.mamoe.mirai.message.data.SuperFace;
-import net.mamoe.mirai.message.data.FlashImage;
+import net.mamoe.mirai.message.data.*;
 import net.mamoe.mirai.utils.BotConfiguration;
 
 import java.util.Set;

@@ -29,4 +29,21 @@ public final class LumiaUtils {
         return fileMessage.toAbsoluteFile(contact);
     }
 
+    public static AtAll getAtAll() {
+        return AtAll.INSTANCE;
+    }
+
+    public static String primitiveByteArrayToString(byte[] bytes) {
+        StringBuilder hexArray = new StringBuilder();
+        for (int num : bytes) {
+            hexArray.append(String.format("%02x", num & 0xFF));
+        }
+        return hexArray.toString();
+    }
+
+    //此函数没有独特的作用。TODO: 日后将其删除。在 `rust_side` 中删除对其的使用。
+    public static ForwardMessageBuilder callAdd_(ForwardMessageBuilder builder, long senderId, String senderName, Message message, int time) {
+        return builder.add(senderId, senderName, message, time);
+    }
+
 }
