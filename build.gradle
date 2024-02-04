@@ -14,6 +14,7 @@ dependencies {
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
     implementation 'net.mamoe:mirai-core:2.16.0'
+    api "net.mamoe:mirai-silk-converter:0.0.5"
     implementation 'io.github.astonbitecode:j4rs:0.17.1'
 //    implementation 'org.asynchttpclient:async-http-client:2.12.3'
     implementation 'org.apache.commons:commons-lang3:3.14.0'
@@ -26,4 +27,12 @@ test {
 }
 kotlin {
     jvmToolchain(17)
+}
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'rt.lea.Main'
+        )
+    }
 }
