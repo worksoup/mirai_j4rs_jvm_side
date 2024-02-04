@@ -45,7 +45,7 @@ jobs:
         gradle-version: '8.5'
 
     - name: Build with Gradle 8.5
-      run: gradle build
+      run: gradle jar
 
   dependency-submission:
 
@@ -60,6 +60,11 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
+
+    - name: Setup Gradle
+      uses: gradle/actions/setup-gradle@ec92e829475ac0c2315ea8f9eced72db85bb337a # v3.0.0
+      with:
+        gradle-version: '8.5'
 
     # Generates and submits a dependency graph, enabling Dependabot Alerts for all project dependencies.
     # See: https://github.com/gradle/actions/blob/main/dependency-submission/README.md
