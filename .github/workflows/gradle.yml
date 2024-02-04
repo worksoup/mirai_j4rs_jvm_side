@@ -50,5 +50,5 @@ jobs:
     - name: Upload artifact for deployment job
       uses: actions/upload-artifact@v3
       with:
-        name: java-app
+        name: mirai_j4rs_jvm_side
         path: '${{ github.workspace }}/build/libs/*.jar'
