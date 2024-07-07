@@ -1,4 +1,4 @@
-package rt.lea;
+package rt.lea.function;
 
 import org.astonbitecode.j4rs.api.Instance;
 import org.astonbitecode.j4rs.api.java2rust.Java2RustUtils;
@@ -10,7 +10,7 @@ import java.util.function.Consumer;
 public final class LumiaConsumer<T> implements Consumer<T> {
     @Override
     public void accept(T e) {
-        System.out.println("java_side");
+        System.out.println("LumiaConsumer");
         System.out.println(Arrays.toString(this.rustConsumer));
         var rustConsumerAsByteList = Arrays.stream(this.rustConsumer).toList();
         nativeAccept(Java2RustUtils.createInstance(rustConsumerAsByteList), Java2RustUtils.createInstance(e));

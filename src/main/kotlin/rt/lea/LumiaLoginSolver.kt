@@ -11,6 +11,8 @@ import net.mamoe.mirai.auth.QRCodeLoginListener
 import net.mamoe.mirai.utils.DeviceVerificationRequests
 import net.mamoe.mirai.utils.DeviceVerificationResult
 import net.mamoe.mirai.utils.LoginSolver
+import rt.lea.function.LumiaKtFunc1
+import rt.lea.function.LumiaKtFunc2
 
 
 private val loginSolverLock = Mutex()
@@ -20,7 +22,8 @@ class LumiaLoginSolver(onSolveSliderCaptcha: LumiaKtFunc2<Bot, java.lang.String,
                        onSolvePicCaptcha: LumiaKtFunc2<Bot, List<Byte>, java.lang.String>,
                        isSliderCaptchaSupported: Boolean,
                        createQRCodeLoginListener: LumiaKtFunc1<Bot, LumiaQrCodeLoginListener>,
-                       onSolveDeviceVerification: LumiaKtFunc2<Bot, DeviceVerificationRequests, DeviceVerificationResult>) : LoginSolver() {
+                       onSolveDeviceVerification: LumiaKtFunc2<Bot, DeviceVerificationRequests, DeviceVerificationResult>
+) : LoginSolver() {
 
     private var _onSolveSliderCaptcha: (Bot, java.lang.String) -> java.lang.String
     private var _onSolvePicCaptcha: (Bot, List<Byte>) -> java.lang.String

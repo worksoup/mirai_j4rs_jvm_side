@@ -15,10 +15,10 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter'
     implementation 'net.mamoe:mirai-core:2.16.0'
     api "net.mamoe:mirai-silk-converter:0.0.5"
-    implementation 'io.github.astonbitecode:j4rs:0.17.2'
-//    implementation 'org.asynchttpclient:async-http-client:2.12.3'
+    implementation 'io.github.astonbitecode:j4rs:0.20.0'
+    implementation 'org.asynchttpclient:async-http-client:3.0.0.Beta3'
     implementation 'org.apache.commons:commons-lang3:3.14.0'
-//    implementation fileTree(dir:"libs", include:["*.jar"])
+    implementation fileTree(dir:"libs", include:["*.jar"])
     implementation "org.jetbrains.kotlin:kotlin-stdlib"
 }
 

@@ -2,16 +2,18 @@ package rt.lea
 
 import net.mamoe.mirai.Bot
 import net.mamoe.mirai.auth.QRCodeLoginListener
+import rt.lea.function.LumiaKtFunc0
+import rt.lea.function.LumiaKtFunc2
 
 class LumiaQrCodeLoginListener(
-        qrCodeSize: Int,
-        qrCodeMargin: Int,
-        qrCodeEcLevel: Int,
-        qrCodeStateUpdateInterval: Long,
-        onFetchQRCode: LumiaKtFunc2<Bot, ByteArray, Unit>,
-        onStateChanged: LumiaKtFunc2<Bot, QRCodeLoginListener.State, Unit>,
-        onIntervalLoop: LumiaKtFunc0<Unit>,
-        onCompleted: LumiaKtFunc0<Unit>,
+    qrCodeSize: Int,
+    qrCodeMargin: Int,
+    qrCodeEcLevel: Int,
+    qrCodeStateUpdateInterval: Long,
+    onFetchQRCode: LumiaKtFunc2<Bot, ByteArray, Unit>,
+    onStateChanged: LumiaKtFunc2<Bot, QRCodeLoginListener.State, Unit>,
+    onIntervalLoop: LumiaKtFunc0<Unit>,
+    onCompleted: LumiaKtFunc0<Unit>,
 ) : QRCodeLoginListener {
 
     private var _onFetchQRCode: (Bot, ByteArray) -> Unit

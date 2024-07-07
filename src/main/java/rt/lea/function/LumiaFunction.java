@@ -1,4 +1,4 @@
-package rt.lea;
+package rt.lea.function;
 
 import org.astonbitecode.j4rs.api.Instance;
 import org.astonbitecode.j4rs.api.java2rust.Java2RustUtils;
