@@ -9,16 +9,18 @@ version = '1.0-SNAPSHOT'
 repositories {
     mavenCentral()
 }
+repositories {
+    maven { url "https://s01.oss.sonatype.org/content/repositories/snapshots" }
+}
 
 dependencies {
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
-    implementation 'net.mamoe:mirai-core:2.16.0'
-    api "net.mamoe:mirai-silk-converter:0.0.5"
+    implementation("top.mrxiaom:overflow-core-all:2.16.0-b2f275f-SNAPSHOT")
+    api("net.mamoe:mirai-core-api:2.16.0")
     implementation 'io.github.astonbitecode:j4rs:0.20.0'
-    implementation 'org.asynchttpclient:async-http-client:3.0.0.Beta3'
     implementation 'org.apache.commons:commons-lang3:3.14.0'
-    implementation fileTree(dir:"libs", include:["*.jar"])
+    implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "org.jetbrains.kotlin:kotlin-stdlib"
 }
 
